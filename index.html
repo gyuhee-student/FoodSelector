@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="오늘 먹을 음식점을 간단하게 골라주는 Food Selector"
+    />
+    <title>Food Selector</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">FOOD SELECTOR</p>
+        <h1>오늘은 어디서<br /><span>먹을까?</span></h1>
+        <p class="description">
+          고민되는 점심시간, 목록에서 마음에 드는 음식점을 골라봐.
+        </p>
+        <button class="pick-button" id="pick-button" type="button">
+          하나 골라줘
+        </button>
+      </header>
+
+      <section class="restaurant-section" aria-labelledby="restaurant-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">RESTAURANTS</p>
+            <h2 id="restaurant-title">음식점 목록</h2>
+          </div>
+          <p class="restaurant-count" id="restaurant-count"></p>
+        </div>
+
+        <ul class="restaurant-grid" id="restaurant-list"></ul>
+      </section>
+    </main>
+
+    <dialog class="result-dialog" id="result-dialog">
+      <button
+        class="close-button"
+        id="close-button"
+        type="button"
+        aria-label="닫기"
+      >
+        ×
+      </button>
+      <p class="dialog-label">오늘의 선택</p>
+      <strong id="selected-restaurant"></strong>
+      <span class="selected-category" id="selected-category"></span>
+      <p>맛있게 먹고 와!</p>
+    </dialog>
+  </body>
+</html>
